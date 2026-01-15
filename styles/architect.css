@@ -262,6 +262,7 @@ header{
 
 #sponsor{
     max-width: 1440px;
+    margin-bottom: 130px;
 }
 #sponsor .sponsor-info{
     max-width: 540px;
@@ -284,6 +285,18 @@ header{
     justify-items: center;
 }
 
+/*footer section*/
+#footer{
+    width: 1440px;
+    background-color: #FFF4E7;
+    border-radius: 8px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 80px;
+}
+#footer .footer-text{
+    font-size: 1.25rem;
+}
 
 
 /*responsive part*/
