@@ -1,19 +1,25 @@
-/*Font Section starts*/
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.work-sans-font {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal; 
-}
-/*Font Section ends*/
 
-/*Shared Section*/
-.display-flex {
+.font-work-sans{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*shared style section*/
+.display-flex{
     display: flex;
 }
-
+.header-bg-color{
+    background-color: rgba(255, 144, 14, 0.1);
+}
 .dark1{
     color: #131313;
 }
@@ -23,66 +29,153 @@
 .dark3{
     color: #727272;
 }
-.dark4{
-    color: #A1A1A1;
-}
-.dark5{
-    color: #D0D0D0;
-}
-.dark6{
-    color: #E7E7E7;
-}
-.dark7{
-    color: #F3F3F3;
-}
-
-.bg-light{
-    background-color: rgba(255, 144, 14, 0.1);
-}
-.primary-btn{
+.btn{
     background-color: #FF900E;
     color: #FFFFFF;
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding: 20px 25px;
     border: none;
     border-radius: 8px;
+    padding: 20px 25px;
+
+    font-size:1.25rem;
+    font-weight: 600;
 }
-/*Header Section*/
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+/*header section*/
+header{
+    max-width: 1920px;
+    padding: 50px 240px;
+    margin: 0 auto;
+}
+    /*nav-section*/
+#navbar{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 51px;
+}
+.brand-name{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.menu-item{
+    list-style-type: none;
+    margin-right: 30px;
+}
+.menu-link{
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 26px;
+}
 
-/*navbar section*/
-    .navbar{
-        justify-content: space-between;
-        align-items: center;
-    }
-    .brand-name{
-        font-size: 45px;
-    }
-    .menu .menu-item{
-        list-style-type: none;
-        margin-right: 30px;
-    }
-    .menu-item .menu-link{
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 26px;
-    }
-    .navbar #banner{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-/*banner section*/
-    .banner-content{
-        max-width: 860px;
-        margin: 65px auto 50px auto;
-        text-align: center;
+#navbar, #banner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
+    /*banner-section*/
+#banner{
+    margin-top: 51px;
+}
+#banner .banner-content{
+    max-width: 862px;
+    margin: 0 auto;
+    text-align: center;
+}
+#banner .banner-content .banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.banner-content .banner-des{
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 32px;
+}
+.banner-content button{
+    margin-bottom: 50px;
+}
+/* #banner .banner-image{
+    width: 1440px;
+    margin: 0 auto;
+} */
+.banner-image img{
+    width: 100%;
+}
+/*main style section*/
+
+    /*team section*/
+
+#team{
+    align-items: center;
+    max-width: 1440px;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 73px;
+    max-width: 540px;
+}
+.our-features .title-part1{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.our-features .title-part2{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.our-features .title-part3{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #FF900E;
+}
+.feature-title{
+    margin-bottom: 24px;
+}
+.feature-des{
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 32px;
+}
+
+
+/*responsive part*/
+
+@media screen and (max-width: 576px) {
+    #navbar, #team, .menu{
+        flex-direction: column;
     }
-    .banner-title{
-        font-size: 4rem;
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
     }
-    #banner img{
-        width: 100%;
+    .our-features{
+        margin-left: 30px;
     }
-/*Main Section*/
+    #banner .banner-content .banner-title{
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 32px;
+    }
+}
+
+/*medium devices*/
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+    #navbar, #team, .menu{
+        flex-direction: column;
+    }
+    /* #team{
+        flex-direction: column;
+    } */
+    .our-features{
+        margin: 50px auto;
+    }
+}
