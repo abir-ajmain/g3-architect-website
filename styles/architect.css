@@ -193,6 +193,9 @@ header{
     border-radius: 8px;
     width: 340px;
     height: 200px;
+    padding: 45px 42px;
+    margin-top: -77px;
+    margin-left: -92px;
 }
 #experience-badge #experience-10years{
     font-size: 4rem;
@@ -288,7 +291,8 @@ header{
 @media screen and (max-width: 576px) {
     #navbar,
     #team,
-    .menu{
+    .menu,
+    #features{
         flex-direction: column;
     }
     .team-img-container,
@@ -309,6 +313,12 @@ header{
         text-align: center;
         margin-top: 20px;
     }
+    .features-image img{
+        width: 100%;
+    }
+    #experience-badge{
+        margin: 20px 0 0 45px;
+    }
     #facts .fact-title{
         text-align: center;
     }
@@ -323,7 +333,7 @@ header{
 /*medium devices*/
 
 @media screen and (min-width: 576px) and (max-width: 992px){
-    #navbar, #team, .menu{
+    #navbar, #team, .menu, #features{
         flex-direction: column;
     }
     /* #team{
@@ -332,10 +342,22 @@ header{
     .our-features{
         margin: 50px auto;
     }
+    #features{
+        gap: 70px;
+    }
+    #features .card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #experience-badge{
+        margin: 20px 200px;
+    }
     .team-img-container,
     .facts-card-container,
     .sponsor-image{
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
 }
