@@ -341,6 +341,12 @@ header{
     .facts-card-container{
         justify-items: center;
     }
+    #footer{
+        max-width: 100%;
+    }
+    #footer .footer-text{
+        font-size: 10px;
+    }
 }
 
 /*medium devices*/
@@ -371,6 +377,9 @@ header{
     .sponsor-image{
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+    #footer{
+        width: 100%;
     }
 
 }
